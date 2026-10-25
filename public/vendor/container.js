@@ -201,6 +201,9 @@ class Container {
         // Ignore all glass elements
         return (
           element.classList.contains('glass-container') ||
+          // WebGL canvases cannot be reliably copied by html2canvas. Capture
+          // the CSS gradient underneath instead of a black/empty GPU buffer.
+          element.classList.contains('shader') ||
           element.classList.contains('glass-button') ||
           element.classList.contains('glass-button-text')
         )

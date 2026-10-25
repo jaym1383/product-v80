@@ -19,3 +19,5 @@ Update 1.2: inspected new green and black alpha PNGs on the gradient in Cloud Br
 
 Update 1.3: resolution-comparison tab replaced by bit depth; RGB counts calculated as 2^bits per channel and 2^(3*bits) combinations. No native 10-bit V80 claim. FPS and resolution spec retained. Build passes.
 Verified 1.3 in Cloud Browser: 8↔10 and 6↔8 selectors update counts, gray toggle works; 360px mobile layout fits without overlapping navigation.
+
+2026-10-26: Production build passes. Headless Chrome with WebGL disabled: CSS start button visually inspected; Space advances slides, focused buttons and reference dialog do not navigate. WebGL capture now excludes the shader canvas; enhancement requires a non-black frame and falls back on context loss. Actual hardware WebGL appearance still needs device verification.
